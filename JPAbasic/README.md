@@ -19,3 +19,12 @@ JPQL 은 객체를 기준으로 쿼리를 짜는 객체 지향
 
 ![img_6.png](images/img_6.png)
 ![img_5.png](images/img_5.png)
+
+
+
+![img_1.png](images/img_11.png)
+![img.png](images/img_10.png)
+
+
+![img_1.png](images/img_12.png)
+![img.png](images/img_13.png)

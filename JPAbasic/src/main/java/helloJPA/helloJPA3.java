@@ -11,7 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class helloJPA2 {
+public class helloJPA3 {
     public static void main(String[] args) {
         EntityManagerFactory hello = Persistence.createEntityManagerFactory("hello");
         EntityManager entityManager = hello.createEntityManager();
@@ -20,11 +20,12 @@ public class helloJPA2 {
 
         try {
 
-            Member member = new Member();
-            member.setId(5L);
-            member.setName("정조");
-            entityManager.persist(member);
-            entityManager.flush(); // DB에 저장
+            Member member = entityManager.find(Member.class, 5L);
+            member.setName("(수정)정조");
+
+//            entityManager.detach(member); // 준영속상태로 만듦
+            entityManager.clear(); // 영속성 컨텍스트를 전체 초기화함
+            Member member2 = entityManager.find(Member.class, 5L);
 
             System.out.println("========================");
 
