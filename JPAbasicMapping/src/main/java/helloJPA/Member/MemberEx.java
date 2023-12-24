@@ -46,7 +46,7 @@ public class MemberEx {
      */
     // 관계 매핑
     // 조인컬럼
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TEAM_ID")
     @Setter
     private TeamEx teamEx;
